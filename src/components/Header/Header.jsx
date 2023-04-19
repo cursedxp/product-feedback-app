@@ -7,7 +7,7 @@ export default function Header() {
         <span>Feedback Board</span>
       </div>
       <div>
-        <span>{MenuIcon}</span>
+        <img src={MenuIcon} alt="" />
       </div>
     </header>
   );
