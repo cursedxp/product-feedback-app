@@ -1,4 +1,4 @@
-import MenuIcon from "../../assets/icons/Menu.svg";
+import MenuIcon from "../../assets/icons/icon-hamburger.svg";
 export default function Header() {
   return (
     <header>
