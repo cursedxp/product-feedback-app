@@ -1,0 +1,4 @@
+@import "../../styles/variables";
+@media (max-width: 375px) {
+  @import "Header.mobile.scss";
+}
