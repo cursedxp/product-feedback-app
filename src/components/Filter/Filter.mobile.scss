@@ -1,0 +1,9 @@
+.filter {
+  padding: 0 24px;
+  height: 56px;
+  justify-content: space-between;
+  align-items: center;
+  button {
+    @include violette-button-default;
+  }
+}

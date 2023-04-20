@@ -1,7 +1,9 @@
+import "./Filter.scss";
 import ArrowIconDown from "../../assets/icons/icon-arrow-down.svg";
+
 export default function Filter() {
   return (
-    <div>
+    <div className="filter">
       <div>
         <div>Sortby :</div>
         <div>
@@ -10,8 +12,7 @@ export default function Filter() {
         </div>
       </div>
       <button>
-        <img src="" alt="" />
-        Add Feedback
+        <img src="" alt="" />+ Add Feedback
       </button>
     </div>
   );

@@ -1,0 +1,10 @@
+@import "../../styles/variables";
+@import "../../styles/mixings";
+.filter {
+  background-color: $rhino;
+  width: 100%;
+  display: flex;
+}
+@media (max-width: 375px) {
+  @import "Filter.mobile.scss";
+} ;
