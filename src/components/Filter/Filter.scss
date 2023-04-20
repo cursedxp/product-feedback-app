@@ -4,6 +4,17 @@
   background-color: $rhino;
   width: 100%;
   display: flex;
+  color: $white;
+  .sort {
+    font-weight: 700;
+    margin: 0 4px;
+    .arrow-icon {
+      margin: 0 8px;
+      & path {
+        stroke: $white;
+      }
+    }
+  }
 }
 @media (max-width: 375px) {
   @import "Filter.mobile.scss";

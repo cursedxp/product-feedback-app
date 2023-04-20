@@ -1,14 +1,14 @@
 import "./Filter.scss";
-import ArrowIconDown from "../../assets/icons/icon-arrow-down.svg";
+import { ReactComponent as ArrowIconDown } from "../../assets/icons/icon-arrow-down.svg";
 
 export default function Filter() {
   return (
     <div className="filter">
-      <div>
-        <div>Sortby :</div>
-        <div>
+      <div className="flex">
+        <div>Sortby : </div>
+        <div className="sort">
           <span>Most Upvotes</span>
-          <img src={ArrowIconDown} alt="" />
+          <ArrowIconDown className="arrow-icon" />
         </div>
       </div>
       <button>

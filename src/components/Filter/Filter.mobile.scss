@@ -3,6 +3,7 @@
   height: 56px;
   justify-content: space-between;
   align-items: center;
+  font-size: $font-size-body-3;
   button {
     @include violette-button-default;
   }
