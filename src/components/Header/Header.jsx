@@ -1,14 +1,16 @@
+import "./Header.scss";
 import MenuIcon from "../../assets/icons/icon-hamburger.svg";
+
 export default function Header() {
   return (
-    <header>
-      <div className="header-mobile">
-        <span>Frontend Mentor</span>
-        <span>Feedback Board</span>
+    <div className="company">
+      <div>
+        <div>Frontend Mentor</div>
+        <div className="board-name">Feedback Board</div>
       </div>
       <div>
         <img src={MenuIcon} alt="" />
       </div>
-    </header>
+    </div>
   );
 }
