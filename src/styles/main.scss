@@ -3,5 +3,14 @@
 @import "variables.scss";
 * {
   font-family: "Jost", sans-serif;
+  box-sizing: border-box;
+}
+body {
   background-color: $background-grey;
+}
+.flex {
+  display: flex;
+}
+.column {
+  flex-direction: column;
 }
