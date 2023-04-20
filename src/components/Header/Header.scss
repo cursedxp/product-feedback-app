@@ -1,4 +1,11 @@
 @import "../../styles/variables";
+.company {
+  color: $white;
+  font-weight: 700;
+  display: flex;
+  .board-name {
+  }
+}
 @media (max-width: 375px) {
   @import "Header.mobile.scss";
 }

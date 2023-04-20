@@ -8,7 +8,7 @@ export default function Header() {
         <div>Frontend Mentor</div>
         <div className="board-name">Feedback Board</div>
       </div>
-      <div>
+      <div className="menu">
         <img src={MenuIcon} alt="" />
       </div>
     </div>

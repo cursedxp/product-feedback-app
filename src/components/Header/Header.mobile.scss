@@ -4,14 +4,16 @@
     center center/cover;
   height: 72px;
   padding: 16px 24px;
-  color: $white;
-  display: flex;
   justify-content: space-between;
   align-items: center;
   font-size: 15px;
-  font-weight: 700;
   .board-name {
     font-size: 13px;
     font-weight: 400;
+  }
+  .menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }
