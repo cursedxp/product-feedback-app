@@ -1,0 +1,22 @@
+.feedbacks {
+  padding: 24px;
+  .feedback {
+    font-size: $font-size-body-3;
+    padding: 24px;
+    gap: 8px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    .item-details {
+      order: 1;
+      flex-grow: 1;
+      margin-bottom: 8px;
+    }
+    .upvotes {
+      @include upvotes;
+      order: 2;
+    }
+    .comments {
+      order: 3;
+    }
+  }
+}
