@@ -11,6 +11,12 @@ const dataSlice = createSlice({
     data: [],
     loading: false,
     error: "",
+    filterBy: "all",
+  },
+  reducers: {
+    setFilter: (state, action) => {
+      state.filterBy = action.payload;
+    },
   },
 
   extraReducers: (builder) => {
@@ -29,5 +35,16 @@ const dataSlice = createSlice({
     });
   },
 });
+//Filter feedbacks by category by using useSelector function in redux
+export const filteredFeedbacks = (state) => {
+  if (state.data.filterBy === "all") {
+    return state.data.data.productRequests;
+  } else {
+    return state.data.data.productRequests?.filter((item) => {
+      return item.category === state.data.filterBy;
+    });
+  }
+};
 
+export const { setFilter } = dataSlice.actions;
 export default dataSlice.reducer;
