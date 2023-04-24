@@ -3,9 +3,11 @@ import { useSelector, useDispatch } from "react-redux";
 import Feedback from "../../components/Feedback/Feedback";
 import Filter from "../../components/Filter/Filter";
 import { useEffect } from "react";
-import { getData } from "../../data/dataSlice";
+import { getData, filteredFeedbacks } from "../../data/dataSlice";
 
 export default function Home() {
+  const filteredItems = useSelector(filteredFeedbacks);
+
   // Get the dispatch function from the useDispatch hook
   const dispatch = useDispatch();
 
@@ -14,17 +16,11 @@ export default function Home() {
     dispatch(getData());
   }, [dispatch]);
 
-  // Select the data slice of the Redux store
-  const feedbacks = useSelector((state) => {
-    return state.data;
-  });
-
   // Get the productRequests array from the feedbacks data, or use an empty array if it doesn't exist
-  const requests = feedbacks?.data?.productRequests || [];
 
   // Render a Feedback component for each request in the productRequests array
-  const feedback = requests.map((request) => {
-    return <Feedback request={request} key={request.id} />;
+  const feedback = filteredItems?.map((item) => {
+    return <Feedback item={item} key={item.id} />;
   });
 
   return (
