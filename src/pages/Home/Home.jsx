@@ -4,6 +4,7 @@ import Feedback from "../../components/Feedback/Feedback";
 import Filter from "../../components/Filter/Filter";
 import { useEffect } from "react";
 import { getData, filteredFeedbacks } from "../../data/dataSlice";
+import { Link } from "react-router-dom";
 
 export default function Home() {
   const filteredItems = useSelector(filteredFeedbacks);
@@ -16,11 +17,13 @@ export default function Home() {
     dispatch(getData());
   }, [dispatch]);
 
-  // Get the productRequests array from the feedbacks data, or use an empty array if it doesn't exist
-
   // Render a Feedback component for each request in the productRequests array
   const feedback = filteredItems?.map((item) => {
-    return <Feedback item={item} key={item.id} />;
+    return (
+      <Link to={`/feedback/${item.id}`} key={item.id} className="link">
+        <Feedback item={item} />
+      </Link>
+    );
   });
 
   return (
