@@ -24,7 +24,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/roadmap" element={<Roadmap />} />
-        <Route path="/feedback" element={<Feedback />} />
+        <Route path="/feedback/:id" element={<Feedback />} />
       </Routes>
     </div>
   );
