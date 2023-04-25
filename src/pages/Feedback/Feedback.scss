@@ -1,5 +1,6 @@
 @import "../../styles/variables";
 @import "../../styles/mixings";
-.feedbacks {
-  padding: 24px;
+
+@media (max-width: 375px) {
+  @import "./Feedback.mobile.scss";
 }

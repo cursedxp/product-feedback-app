@@ -10,8 +10,7 @@ function App() {
   const pathLocation = location.pathname;
 
   // Define an array of paths where the header should be hidden
-  const hideHeaderOnPaths = ["/feedback"];
-
+  const hideHeaderOnPaths = ["/feedback/"];
   // Check if the current path is in the hideHeaderPaths array using the includes method
   const hideHeader = hideHeaderOnPaths.includes(pathLocation);
 

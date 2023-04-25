@@ -1,5 +1,7 @@
 import CommetIcon from "../../assets/icons/icon-comments.svg";
 import ArrowIconUp from "../../assets/icons/icon-arrow-up.svg";
+import "./Feedback.scss";
+
 export default function Feedback({ item }) {
   const { title, description, category, upvotes, comments } = item;
 
