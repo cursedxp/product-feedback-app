@@ -4,6 +4,7 @@
   font-weight: 700;
   display: flex;
 }
+
 @media (max-width: 375px) {
   @import "Header.mobile.scss";
 }

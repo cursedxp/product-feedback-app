@@ -1,3 +1,4 @@
+@import "../../styles/mixings";
 .company {
   /* Set the background image and position it in the center of the header */
   background: url("../../../public/img/mobile/background-header.png") no-repeat
@@ -15,5 +16,74 @@
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+}
+.mobile-menu {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.5);
+  top: 72px;
+  right: 0px;
+  width: 100vw;
+  height: 100vh;
+  .wrapper {
+    position: absolute;
+    right: 0px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 0;
+    width: 271px;
+    height: 100%;
+    background-color: $background-grey;
+    padding: 24px;
+    gap: 24px;
+    .road-map {
+      @include card;
+      padding: 24px;
+
+      .card-title {
+        font-weight: 700;
+        color: rhino;
+      }
+      ul {
+        list-style: none;
+        padding: 0px;
+        li {
+          display: flex;
+          justify-content: space-between;
+          div {
+            display: flex;
+            align-items: center;
+          }
+          color: $lynch;
+          .status {
+            font-size: $font-size-body-1;
+            display: block;
+          }
+          .orange,
+          .violet,
+          .blue {
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            border-radius: 100%;
+            margin: 16px 16px 16px 0px;
+          }
+          .orange {
+            background: $tacao;
+          }
+          .violet {
+            background: $electric-violet;
+          }
+          .blue {
+            background: $malibu;
+          }
+          .total {
+            align-self: center;
+            font-weight: 700;
+            display: block;
+          }
+        }
+      }
+    }
   }
 }

@@ -1,0 +1,28 @@
+@import "../../styles/variables";
+@import "../../styles/mixings";
+
+.category-filter {
+  @include card;
+
+  padding: 24px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  flex-grow: 0;
+}
+
+label {
+  @include radio-label;
+  &:hover {
+    background-color: $royal-blue;
+    color: $white;
+  }
+}
+input[type="radio"][name="category"]:checked + label {
+  background-color: $royal-blue;
+  color: $white;
+}
+input[type="radio"][name="category"] {
+  position: absolute;
+  opacity: 0;
+}
