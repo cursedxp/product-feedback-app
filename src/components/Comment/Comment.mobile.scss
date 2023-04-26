@@ -10,4 +10,9 @@
       font-size: 13px;
     }
   }
+  .replies {
+    & > :first-child {
+      border-left: 1px solid $selago;
+    }
+  }
 }

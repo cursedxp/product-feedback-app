@@ -1,5 +1,7 @@
 import { Link } from "react-router-dom";
 import "./Comment.scss";
+import Reply from "../Reply/Reply";
+import { v4 as uuidv4 } from "uuid";
 export default function Comment({ comment }) {
   return (
     <div className="comment">
@@ -13,6 +15,14 @@ export default function Comment({ comment }) {
       </div>
       <div className="comment-content">
         <p>{comment.content}</p>
+        {comment.replies && (
+          <div className="replies">
+            {comment.replies.map((reply) => {
+              const id = uuidv4();
+              return <Reply reply={reply} key={id} />;
+            })}
+          </div>
+        )}
       </div>
     </div>
   );
