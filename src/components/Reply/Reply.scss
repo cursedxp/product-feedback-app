@@ -1,0 +1,6 @@
+@import "../../styles/variables";
+@import "../../styles/mixings";
+
+@media (max-width: 375px) {
+  @import "./Reply.mobile.scss";
+}
