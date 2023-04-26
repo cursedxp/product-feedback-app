@@ -1,5 +1,27 @@
 @import "../../styles/variables";
 @import "../../styles/mixings";
+.feedback-details {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  .comments {
+    @include card;
+    padding: 24px;
+    .section-header {
+      font-weight: 700;
+      font-size: 18px;
+      color: $primary-color;
+      margin: 0 0 24px 0;
+      & span:first-child {
+        display: inline-block;
+        margin-right: 4px;
+      }
+    }
+    & div:last-child {
+      border: none;
+    }
+  }
+}
 
 @media (max-width: 375px) {
   @import "./Feedback.mobile.scss";
