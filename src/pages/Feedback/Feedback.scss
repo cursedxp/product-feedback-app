@@ -21,6 +21,40 @@
       border: none;
     }
   }
+  .add-comment {
+    @include card;
+    padding: 24px;
+    margin: 0px 0px 88px 0px;
+    .section-header {
+      font-weight: 700;
+      font-size: 18px;
+      color: $primary-color;
+      margin: 0 0 24px 0;
+    }
+    form {
+      textarea {
+        border: none;
+        width: 100%;
+        background-color: $background-grey;
+        height: 80px;
+        border-radius: 5px;
+        font-size: 13px;
+        &::placeholder {
+          font-size: 13px;
+          padding: 16px;
+        }
+      }
+      button {
+        @include violette-button-default;
+      }
+      .char-count {
+        margin: 16px 0 0 0;
+        font-size: 13px;
+        display: flex;
+        justify-content: space-between;
+      }
+    }
+  }
 }
 
 @media (max-width: 375px) {
