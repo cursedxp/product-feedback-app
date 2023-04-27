@@ -16,6 +16,7 @@
     }
     .description {
       color: $lynch;
+      line-height: 20px;
     }
     .category {
       @include category-card;
