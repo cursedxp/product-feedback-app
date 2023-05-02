@@ -10,7 +10,7 @@
     align-items: center;
     font-size: 14px;
     font-weight: 600;
-    color: $primary-color;
+    color: $lynch;
     & div:first-child {
       img {
         margin: 0px 8px 0px 0px;
@@ -50,16 +50,6 @@
     }
     form {
       textarea {
-        border: none;
-        width: 100%;
-        background-color: $background-grey;
-        height: 80px;
-        border-radius: 5px;
-        font-size: 13px;
-        &::placeholder {
-          font-size: 13px;
-          padding: 16px;
-        }
       }
       button {
         @include violette-button-default;
