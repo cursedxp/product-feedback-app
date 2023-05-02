@@ -22,3 +22,28 @@ body {
   text-decoration: none;
   color: inherit;
 }
+textarea {
+  @include inputStyle;
+  height: 80px;
+  font-size: 13px;
+  color: $primary-color;
+  &::placeholder {
+    font-size: 13px;
+  }
+}
+
+input {
+  @include inputStyle;
+}
+select {
+  @include inputStyle;
+  appearance: none;
+  -webkit-appearance: none;
+  padding-right: 16px;
+  background-image: url("../../public/assets/icons/icon-arrow-down.svg");
+  background-repeat: no-repeat;
+  background-position: calc(100% - 20px + 4px) center;
+  option::first-letter {
+    text-transform: capitalize;
+  }
+}
