@@ -4,9 +4,26 @@
   display: flex;
   flex-direction: column;
   gap: 24px;
+  .page-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+    font-weight: 600;
+    color: $primary-color;
+    & div:first-child {
+      img {
+        margin: 0px 8px 0px 0px;
+      }
+    }
+    & button:last-child {
+      @include royal-blue-button-default;
+    }
+  }
   .comments {
     @include card;
     padding: 24px;
+
     .section-header {
       font-weight: 700;
       font-size: 18px;
