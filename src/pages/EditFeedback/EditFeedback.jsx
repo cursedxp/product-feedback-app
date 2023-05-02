@@ -4,6 +4,8 @@ import { useSelector, useDispatch } from "react-redux";
 import { useEffect, useMemo, useState } from "react";
 import { getData } from "../../data/dataSlice";
 import { v4 as uuidv4 } from "uuid";
+import "./EditFeedback.scss";
+import EditImage from "../../assets/img/icon-edit-feedback.svg";
 
 export default function EditFeedback() {
   const dispatch = useDispatch();
@@ -58,7 +60,7 @@ export default function EditFeedback() {
   });
 
   return (
-    <div>
+    <div className="edit-feedback">
       <div className="page-nav">
         <div>
           <Link to={`/feedback/${id}`} className="link">
@@ -68,8 +70,8 @@ export default function EditFeedback() {
           </Link>
         </div>
       </div>
-      <div className="update-edit-form">
-        <img src="" alt="" />
+      <div className="edit">
+        <img src={EditImage} alt="" className="container-image" />
         <div className="feedback-title">{feedback.title}</div>
         <form>
           <div className="title-section">
@@ -152,11 +154,9 @@ export default function EditFeedback() {
             />
           </div>
           <div className="button-group">
+            <button className="save">Save Changes</button>
+            <button className="cancel">Cancel</button>
             <button className="delete">Delete</button>
-            <div className="button-group">
-              <button className="cancel">Cancel</button>
-              <button className="save">Save Changes</button>
-            </div>
           </div>
         </form>
       </div>
