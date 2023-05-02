@@ -1,10 +1,11 @@
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { getData } from "../../data/dataSlice";
 import { useEffect, useMemo, useState } from "react";
 import FeedbackComp from "../../components/Feedback/Feedback";
 import "./Feedback.scss";
 import Comment from "../../components/Comment/Comment";
+import arrowIconLeft from "../../assets/icons/icon-arrow-left.svg";
 
 export default function Feedback() {
   const { id } = useParams();
@@ -35,6 +36,18 @@ export default function Feedback() {
 
   return (
     <div className="feedback-details">
+      <div className="page-nav">
+        <div>
+          <Link to={"/"} className="link">
+            <img src={arrowIconLeft} alt={arrowIconLeft} />
+
+            <span>Go Back</span>
+          </Link>
+        </div>
+        <Link to={`/feedback/edit/${id}`}>
+          <button>Edit feedback</button>
+        </Link>
+      </div>
       <FeedbackComp item={feedback} />
       <div className="comments">
         <div className="section-header">
