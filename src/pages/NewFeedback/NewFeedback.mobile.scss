@@ -1,0 +1,53 @@
+.create-feedback {
+  gap: 55px;
+  padding: 24px 24px 77px 24px;
+  font-size: 13px;
+  .new {
+    position: relative;
+    .container-image {
+      position: absolute;
+      top: -20px;
+      left: 024px;
+      width: 40px;
+      height: 40px;
+    }
+    .feedback-title {
+      margin-top: 20px;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      .title-section .title,
+      .category-section .category-name,
+      .status-section .status-name,
+      .detail-section .feedback-detail {
+        color: $primary-color;
+        font-size: 13px;
+        font-weight: 700;
+        margin: 0 0 4px 0;
+      }
+      .title-section .title-subtext,
+      .category-section .category-subtext,
+      .status-section .status-subtext,
+      .detail-section .detail-subtext {
+        color: $lynch;
+        font-size: 13px;
+        margin-bottom: 16px;
+      }
+      .button-group {
+        flex-direction: column;
+        gap: 16px;
+        .cancel {
+          @include primary-button-default;
+        }
+        .save {
+          @include violette-button-default;
+        }
+        .delete {
+          @include red-button-default;
+        }
+      }
+    }
+  }
+}
