@@ -4,6 +4,7 @@ import Roadmap from "./pages/Roadmap/Roadmap";
 import Feedback from "./pages/Feedback/Feedback";
 import Header from "./components/Header/Header";
 import EditFeedback from "./pages/EditFeedback/EditFeedback";
+import NewFeedback from "./pages/NewFeedback/NewFeedback";
 
 function App() {
   // Get the current URL location using the useLocation hook from react-router-dom
@@ -24,6 +25,7 @@ function App() {
         <Route path="/roadmap" element={<Roadmap />} />
         <Route path="/feedback/:id" element={<Feedback />} />
         <Route path="/feedback/edit/:id" element={<EditFeedback />} />
+        <Route path="/feedback/newfeedback" element={<NewFeedback />} />
       </Routes>
     </div>
   );
