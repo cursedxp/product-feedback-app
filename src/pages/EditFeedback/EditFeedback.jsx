@@ -142,7 +142,8 @@ export default function EditFeedback() {
           <div className="detail-section">
             <div className="feedback-detail">Feedback detail</div>
             <div className="detail-subtext">
-              Add a short, descriptive headline
+              Include any specific comments on what should be improved, added,
+              etc.
             </div>
             <textarea
               name=""
