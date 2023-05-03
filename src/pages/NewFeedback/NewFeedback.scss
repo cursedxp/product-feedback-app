@@ -1,0 +1,50 @@
+@import "../../styles/variables";
+@import "../../styles/mixings";
+.create-feedback {
+  display: flex;
+  flex-direction: column;
+  color: $primary-color;
+  .page-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 600;
+    color: $lynch;
+    & div:first-child {
+      img {
+        margin: 0px 8px 0px 0px;
+      }
+    }
+    & button:last-child {
+      @include royal-blue-button-default;
+    }
+  }
+  .new {
+    @include card;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    padding: 24px;
+
+    .feedback-title {
+      color: $primary-color;
+      font-size: 18px;
+      font-weight: 700;
+      letter-spacing: -0.25px;
+    }
+    form {
+      .detail-section {
+        textarea {
+          margin-bottom: 16px;
+        }
+      }
+      .button-group {
+        display: flex;
+      }
+    }
+  }
+}
+
+@media (max-width: 375px) {
+  @import "./NewFeedback.mobile.scss";
+}
