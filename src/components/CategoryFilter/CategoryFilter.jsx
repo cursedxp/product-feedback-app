@@ -1,11 +1,9 @@
 import { setFilter } from "../../data/dataSlice";
 import { useDispatch } from "react-redux";
 import "./CategoryFilter.scss";
-import React from "react";
 
 export default function CategoryFilter({ categories }) {
   const dispatch = useDispatch();
-
   // Set filter category when user clicks on radio buttons
   const handleFilter = (categoryName) => {
     dispatch(setFilter(categoryName));
@@ -18,6 +16,7 @@ export default function CategoryFilter({ categories }) {
           type="radio"
           name="category"
           id="all"
+          defaultChecked
           onChange={() => handleFilter("all")}
         />
         <label htmlFor="all">all</label>
