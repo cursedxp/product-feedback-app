@@ -12,10 +12,14 @@ const dataSlice = createSlice({
     loading: false,
     error: "",
     filterBy: "all",
+    sortBy: "",
   },
   reducers: {
     setFilter: (state, action) => {
       state.filterBy = action.payload;
+    },
+    setSort: (state, action) => {
+      state.sortBy = action.payload;
     },
   },
 
@@ -46,5 +50,40 @@ export const filteredFeedbacks = (state) => {
   }
 };
 
-export const { setFilter } = dataSlice.actions;
+export const sortAndFilterFeedbacks = (state) => {
+  const filtered = filteredFeedbacks(state);
+  if (!Array.isArray(filtered)) {
+    // check if filtered is not an array
+    return []; // return an empty array to prevent errors
+  }
+  let sorted = [...filtered]; // Create a new mutable array from the filtered array
+  switch (state.data.sortBy) {
+    case "most-upvotes":
+      sorted.sort((a, b) => {
+        return a.upvotes - b.upvotes;
+      });
+      break;
+    case "least-upvotes":
+      sorted.sort((a, b) => {
+        return b.upvotes - a.upvotes;
+      });
+      break;
+    case "most-comments":
+      sorted.sort((a, b) => {
+        return a.comments - b.comments;
+      });
+      break;
+    case "least-comments":
+      sorted.sort((a, b) => {
+        return b.comments - a.comments;
+      });
+      break;
+    default:
+      sorted = filtered;
+      break;
+  }
+  return sorted;
+};
+
+export const { setFilter, setSort } = dataSlice.actions;
 export default dataSlice.reducer;
