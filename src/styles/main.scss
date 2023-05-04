@@ -22,6 +22,9 @@ body {
   text-decoration: none;
   color: inherit;
 }
+.align-center {
+  align-items: center;
+}
 textarea {
   @include inputStyle;
   height: 80px;

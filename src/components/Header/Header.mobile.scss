@@ -42,7 +42,14 @@
 
       .card-title {
         font-weight: 700;
-        color: rhino;
+        font-size: 18px;
+        color: $rhino;
+      }
+      .link {
+        color: $royal-blue;
+        font-size: 13px;
+        text-decoration: underline;
+        font-weight: 600;
       }
       ul {
         list-style: none;

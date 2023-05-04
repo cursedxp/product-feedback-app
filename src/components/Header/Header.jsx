@@ -40,9 +40,9 @@ export default function Header() {
           <div className="wrapper">
             <CategoryFilter categories={categories} />
             <div className="road-map">
-              <div className="flex space-between">
+              <div className="flex space-between align-center">
                 <span className="card-title">Roadmap</span>
-                <Link>View</Link>
+                <Link className="link">View</Link>
               </div>
               <ul>
                 <li>
