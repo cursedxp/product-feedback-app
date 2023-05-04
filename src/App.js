@@ -10,10 +10,12 @@ function App() {
   // Get the current URL location using the useLocation hook from react-router-dom
   const location = useLocation();
   const pathLocation = location.pathname;
+  const hidedHeaderPaths = ["/feedback/", "roadmap"];
 
   // Check if the current path is in the hideHeaderPaths array using the includes method
-  const hideHeader = pathLocation.includes("/feedback/");
-
+  const hideHeader = hidedHeaderPaths.some((path) =>
+    pathLocation.includes(path)
+  );
   return (
     <div className="App">
       {/* Conditionally render the Header component based on the value of hideHeader  */}
