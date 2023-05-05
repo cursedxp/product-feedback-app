@@ -13,6 +13,7 @@ const dataSlice = createSlice({
     error: "",
     filterBy: "all",
     sortBy: "",
+    statusBy: "",
   },
   reducers: {
     setFilter: (state, action) => {
@@ -20,6 +21,9 @@ const dataSlice = createSlice({
     },
     setSort: (state, action) => {
       state.sortBy = action.payload;
+    },
+    setStatus: (state, action) => {
+      state.statusBy = action.payload;
     },
   },
 
@@ -48,6 +52,12 @@ export const filteredFeedbacks = (state) => {
       return item.category === state.data.filterBy;
     });
   }
+};
+
+export const filteredByStatus = (state) => {
+  return state.data.data.productRequests?.filter(
+    (item) => item.status === state.data.statusBy
+  );
 };
 
 export const sortAndFilterFeedbacks = (state) => {
@@ -85,5 +95,5 @@ export const sortAndFilterFeedbacks = (state) => {
   return sorted;
 };
 
-export const { setFilter, setSort } = dataSlice.actions;
+export const { setFilter, setSort, setStatus } = dataSlice.actions;
 export default dataSlice.reducer;
