@@ -1,6 +1,7 @@
 import { setFilter } from "../../data/dataSlice";
 import { useDispatch } from "react-redux";
 import "./CategoryFilter.scss";
+import React from "react";
 
 export default function CategoryFilter({ categories }) {
   const dispatch = useDispatch();
