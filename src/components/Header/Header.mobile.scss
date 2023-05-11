@@ -1,21 +1,27 @@
 @import "../../styles/mixings";
-.company {
-  /* Set the background image and position it in the center of the header */
-  background: url("../../../public/img/mobile/background-header.png") no-repeat
-    center center/cover;
-  height: 72px;
-  padding: 16px 24px;
-  justify-content: space-between;
-  align-items: center;
-  font-size: 15px;
-  .board-name {
-    font-size: 13px;
-    font-weight: 400;
-  }
-  .menu {
-    display: flex;
-    justify-content: center;
+.filters-section {
+  .company {
+    /* Set the background image and position it in the center of the header */
+    background: url("../../../public/img/mobile/background-header.png")
+      no-repeat center center/cover;
+    height: 72px;
+    padding: 16px 24px;
+    justify-content: space-between;
     align-items: center;
+    font-size: 15px;
+    .board-name {
+      font-size: 13px;
+      font-weight: 400;
+    }
+    .menu {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+  .road-map,
+  .category-filter {
+    display: none;
   }
 }
 .mobile-menu {
