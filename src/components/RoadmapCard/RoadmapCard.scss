@@ -1,0 +1,27 @@
+.feedback {
+  position: relative;
+
+  .card-color {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 6px;
+    width: 100%;
+    border-radius: 6px 6px 0 0;
+  }
+  .card-status {
+    margin-bottom: 16px;
+    .circle {
+      display: inline-block;
+      width: 8px;
+      height: 8px;
+      border-radius: 100%;
+      margin-right: 8px;
+    }
+    .status {
+      &::first-letter {
+        text-transform: uppercase;
+      }
+    }
+  }
+}
