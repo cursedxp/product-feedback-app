@@ -8,3 +8,7 @@
 @media (max-width: 375px) {
   @import "Header.mobile.scss";
 }
+
+@media (min-width: 375px) and (max-width: 768px) {
+  @import "Header.tablet.scss";
+}
