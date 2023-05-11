@@ -4,7 +4,8 @@ import CloseMenuIcon from "../../assets/icons/icon-close.svg";
 import { useState } from "react";
 import { useSelector } from "react-redux";
 import CategoryFilter from "../CategoryFilter/CategoryFilter";
-import { Link } from "react-router-dom";
+import RoadMapWidget from "../RoadmapWidget/RoadMapWidget";
+import { createPortal } from "react-dom";
 
 export default function Header() {
   //Get all feedback categories from the store
@@ -24,7 +25,7 @@ export default function Header() {
   };
 
   return (
-    <div>
+    <div className="filters-section">
       <div className="company">
         <div>
           <div>Frontend Mentor</div>
@@ -34,43 +35,19 @@ export default function Header() {
           <img src={showMobileMenu ? CloseMenuIcon : OpenMenuIcon} alt="" />
         </div>
       </div>
+      <CategoryFilter categories={categories} />
+      <RoadMapWidget />
       <div className="sort-categories"></div>
-      {showMobileMenu && (
-        <div className="mobile-menu">
-          <div className="wrapper">
-            <CategoryFilter categories={categories} />
-            <div className="road-map">
-              <div className="flex space-between align-center">
-                <span className="card-title">Roadmap</span>
-                <Link className="link">View</Link>
-              </div>
-              <ul>
-                <li>
-                  <div>
-                    <span className="orange"></span>
-                    <span className="status">Planned</span>
-                  </div>
-                  <span className="total">2</span>
-                </li>
-                <li>
-                  <div>
-                    <span className="violet"></span>
-                    <span className="status">In-Progress</span>
-                  </div>
-                  <span className="total">3</span>
-                </li>
-                <li>
-                  <div>
-                    <span className="blue"></span>
-                    <span className="status">Live</span>
-                  </div>
-                  <span className="total">1</span>
-                </li>
-              </ul>
+      {showMobileMenu &&
+        createPortal(
+          <div className="mobile-menu">
+            <div className="wrapper">
+              <CategoryFilter categories={categories} />
+              <RoadMapWidget />
             </div>
-          </div>
-        </div>
-      )}
+          </div>,
+          document.body
+        )}
     </div>
   );
 }
