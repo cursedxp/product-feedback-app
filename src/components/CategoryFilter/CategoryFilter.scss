@@ -18,6 +18,9 @@ label {
     color: $white;
   }
 }
+input[type="radio"] {
+  width: 20px;
+}
 input[type="radio"][name="category"]:checked + label {
   background-color: $royal-blue;
   color: $white;
