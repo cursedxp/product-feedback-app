@@ -1,0 +1,77 @@
+@import "../../styles/variables.scss";
+@import "../../styles/mixings";
+
+.road-map {
+  .nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: $rhino;
+    height: 100px;
+    img {
+      padding-right: 8px;
+      fill: white;
+    }
+    .link {
+      color: $white;
+    }
+    button {
+      @include violette-button-default;
+    }
+  }
+  .roadmap-filter {
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+    ::first-letter {
+      text-transform: uppercase;
+    }
+  }
+  .status-menu {
+    position: relative;
+    color: rgba(58, 67, 116, 0.5);
+
+    &.status-planned {
+      color: $primary-color;
+      &::after {
+        content: " ";
+        position: absolute;
+        bottom: -20px;
+        left: 0;
+        width: 100%;
+        height: 4px;
+        background-color: $tacao;
+      }
+    }
+
+    &.status-live {
+      color: $primary-color;
+      &::after {
+        content: " ";
+        position: absolute;
+        bottom: -20px;
+        left: 0;
+        width: 100%;
+        height: 4px;
+        background-color: $malibu;
+      }
+    }
+
+    &.status-in-progress {
+      color: $primary-color;
+      &::after {
+        content: " ";
+        position: absolute;
+        bottom: -20px;
+        left: 0;
+        width: 100%;
+        height: 4px;
+        background-color: $electric-violet;
+      }
+    }
+  }
+}
+
+@media (max-width: 375px) {
+  @import "Roadmap.mobile.scss";
+}
