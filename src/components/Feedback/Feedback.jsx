@@ -16,7 +16,7 @@ export default function Feedback({ item }) {
         <img src={ArrowIconUp} alt="" />
         <span>{upvotes}</span>
       </div>
-      <div className="comments">
+      <div className="total-comments">
         <img src={CommetIcon} alt="" />
         {comments && comments.length ? comments.length : 0}
       </div>
