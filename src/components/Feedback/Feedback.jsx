@@ -14,7 +14,7 @@ export default function Feedback({ item }) {
       </div>
       <div className="upvotes">
         <img src={ArrowIconUp} alt="" />
-        {upvotes}
+        <span>{upvotes}</span>
       </div>
       <div className="comments">
         <img src={CommetIcon} alt="" />
