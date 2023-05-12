@@ -2,12 +2,15 @@
   gap: 55px;
   padding: 24px 24px 77px 24px;
   font-size: 13px;
+  .page-nav {
+    margin-bottom: 0px;
+  }
   .edit {
     position: relative;
+    padding: 24px;
     .container-image {
-      position: absolute;
       top: -20px;
-      left: 024px;
+      left: 24px;
       width: 40px;
       height: 40px;
     }
@@ -15,9 +18,6 @@
       margin-top: 20px;
     }
     form {
-      display: flex;
-      flex-direction: column;
-      gap: 24px;
       .title-section .title,
       .category-section .category-name,
       .status-section .status-name,
@@ -36,16 +36,19 @@
         margin-bottom: 16px;
       }
       .button-group {
+        display: flex;
         flex-direction: column;
         gap: 16px;
+
         .cancel {
-          @include primary-button-default;
+          order: 2;
         }
         .save {
-          @include violette-button-default;
+          order: 3;
         }
         .delete {
-          @include red-button-default;
+          order: 1;
+          margin: 0px;
         }
       }
     }

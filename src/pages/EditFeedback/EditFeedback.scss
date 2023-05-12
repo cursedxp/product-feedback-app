@@ -4,13 +4,14 @@
 .edit-feedback {
   display: flex;
   flex-direction: column;
-
+  padding: 56px 114px 122px 114px;
   .page-nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
     font-weight: 600;
     color: $lynch;
+    margin-bottom: 68px;
     & div:first-child {
       img {
         margin: 0px 8px 0px 0px;
@@ -25,7 +26,14 @@
     display: flex;
     flex-direction: column;
     gap: 14px;
-    padding: 24px;
+    padding: 52px 42px 40px 42px;
+    .container-image {
+      position: absolute;
+      top: 112px;
+      left: 150px;
+      width: 56px;
+      height: 56px;
+    }
     .feedback-title {
       color: $primary-color;
       font-size: 18px;
@@ -33,6 +41,26 @@
       letter-spacing: -0.25px;
     }
     form {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      .title-section .title,
+      .category-section .category-name,
+      .status-section .status-name,
+      .detail-section .feedback-detail {
+        color: $primary-color;
+        font-size: 14px;
+        font-weight: 700;
+        margin: 0 0 4px 0;
+      }
+      .title-section .title-subtext,
+      .category-section .category-subtext,
+      .status-section .status-subtext,
+      .detail-section .detail-subtext {
+        color: $lynch;
+        font-size: 14px;
+        margin-bottom: 16px;
+      }
       .detail-section {
         textarea {
           margin-bottom: 16px;
@@ -40,6 +68,22 @@
       }
       .button-group {
         display: flex;
+        justify-content: space-between;
+        gap: 16px;
+
+        .cancel {
+          order: 2;
+          @include primary-button-default;
+        }
+        .save {
+          order: 3;
+          @include violette-button-default;
+        }
+        .delete {
+          order: 1;
+          margin-right: auto;
+          @include red-button-default;
+        }
       }
     }
   }
