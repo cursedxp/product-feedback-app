@@ -27,7 +27,7 @@ export default function Home() {
   });
 
   return (
-    <div>
+    <div className="home">
       <Filter />
       <div className="feedbacks">{feedback}</div>
     </div>
