@@ -37,7 +37,6 @@ export default function Header() {
       </div>
       <CategoryFilter categories={categories} />
       <RoadMapWidget />
-      <div className="sort-categories"></div>
       {showMobileMenu &&
         createPortal(
           <div className="mobile-menu">
