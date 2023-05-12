@@ -28,7 +28,7 @@ export default function Home() {
 
   return (
     <div className="home">
-      <Filter />
+      <Filter items={filteredItems.length} />
       <div className="feedbacks">{feedback}</div>
     </div>
   );
