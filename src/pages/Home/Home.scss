@@ -1,16 +1,16 @@
 @import "../../styles/variables";
 @import "../../styles/mixings";
-
-.feedbacks {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
+.home {
+  .feedbacks {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
 }
-
 @media (max-width: 375px) {
   @import "Home.mobile.scss";
 }
 
-@media (min-width: 375px) and (min-width: 768px) {
+@media (min-width: 376px) and (max-width: 768px) {
   @import "Home.tablet.scss";
 }
