@@ -1,9 +1,23 @@
 @import "../../styles/variables";
 .filters-section {
+  display: flex;
+  gap: 10px;
   .company {
     color: $white;
     font-weight: 700;
     display: flex;
+    border-radius: 10px;
+    padding: 24px;
+    align-items: flex-end;
+    .board-name {
+      font-size: 15px;
+      font-weight: 400;
+    }
+  }
+  .category-filter,
+  .road-map,
+  .company {
+    flex: 1;
   }
 }
 
