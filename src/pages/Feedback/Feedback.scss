@@ -22,7 +22,6 @@
   .comments {
     @include card;
     padding: 24px;
-
     .section-header {
       font-weight: 700;
       font-size: 18px;
@@ -32,9 +31,6 @@
         display: inline-block;
         margin-right: 4px;
       }
-    }
-    & div:last-child {
-      border: none;
     }
   }
   .add-comment {
@@ -65,4 +61,8 @@
 
 @media (max-width: 375px) {
   @import "./Feedback.mobile.scss";
+}
+
+@media (min-width: 376px) and (max-width: 768px) {
+  @import "./Feedback.tablet.scss";
 }
