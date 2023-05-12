@@ -5,8 +5,29 @@
   width: 100%;
   display: flex;
   color: $white;
+  height: 72px;
+  border-radius: 10px;
+  align-items: center;
+  padding: 16px;
+  justify-content: space-between;
+  margin-bottom: 24px;
+  button {
+    @include violette-button-default;
+  }
   .flex {
     position: relative;
+    font-size: 14px;
+    align-items: center;
+    .suggestions {
+      display: flex;
+      align-items: center;
+      margin-right: 24px;
+      font-weight: 700;
+      font-size: 18px;
+      img {
+        margin-right: 16px;
+      }
+    }
     .dropdown-toggle {
       font-weight: 700;
       margin: 0 4px;
@@ -51,4 +72,8 @@
 }
 @media (max-width: 375px) {
   @import "Filter.mobile.scss";
+}
+
+@media (min-width: 375px) and (max-width: 768px) {
+  @import "Filter.tablet.scss";
 }
