@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import "./RoadMap.scss";
 export default function RoadMapWidget() {
   return (
     <div className="road-map">
