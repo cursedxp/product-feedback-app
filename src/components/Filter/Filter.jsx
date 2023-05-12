@@ -5,8 +5,9 @@ import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { setSort } from "../../data/dataSlice";
 import checkIcon from "../../assets/icons/icon-check.svg";
+import suggestionIcon from "../../assets/icons/icon-suggestions.svg";
 
-export default function Filter() {
+export default function Filter({ items }) {
   const dispatch = useDispatch();
   const [isOpen, setIsOpen] = useState(false);
   const [selectedOption, setSelectedOption] = useState(null);
@@ -29,6 +30,10 @@ export default function Filter() {
   return (
     <div className="filter">
       <div className="flex">
+        <div className="suggestions">
+          <img src={suggestionIcon} alt="" />
+          <span>{items} Suggestions</span>
+        </div>
         <div>Sortby : </div>
         <div className="dropdown-toggle" onClick={toggleDropdown}>
           <span>{selectedOption ? selectedOption : "Select an option"}</span>
