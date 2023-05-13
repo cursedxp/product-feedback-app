@@ -56,6 +56,13 @@ select {
   max-width: 1111px;
 }
 
+@media (max-width: 375px) {
+  .App {
+    flex-direction: column;
+    margin: 0;
+  }
+}
+
 @media (min-width: 376px) and (max-width: 768px) {
   .App {
     margin: 0;
