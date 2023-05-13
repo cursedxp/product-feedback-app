@@ -53,5 +53,12 @@ select {
 .App {
   display: flex;
   margin: 94px auto;
-  width: 1111px;
+  max-width: 1111px;
+}
+
+@media (min-width: 376px) and (max-width: 768px) {
+  .App {
+    margin: 0;
+    flex-direction: column;
+  }
 }
