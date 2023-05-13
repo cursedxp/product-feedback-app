@@ -4,6 +4,7 @@
 .edit-feedback {
   display: flex;
   flex-direction: column;
+  margin: 0 auto;
   padding: 56px 114px 122px 114px;
   .page-nav {
     display: flex;
@@ -29,8 +30,8 @@
     padding: 52px 42px 40px 42px;
     .container-image {
       position: absolute;
-      top: 112px;
-      left: 150px;
+      top: 209px;
+      left: 386px;
       width: 56px;
       height: 56px;
     }

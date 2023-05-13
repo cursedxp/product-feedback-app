@@ -5,6 +5,7 @@
   flex-direction: column;
   color: $primary-color;
   padding: 56px 114px 223px 114px;
+  margin: 0 auto;
   .page-nav {
     display: flex;
     justify-content: space-between;
@@ -29,8 +30,8 @@
     padding: 52px 42px 40px 42px;
     .container-image {
       position: absolute;
-      top: 112px;
-      left: 150px;
+      top: 209px;
+      left: 386px;
       width: 56px;
       height: 56px;
     }
