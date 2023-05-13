@@ -1,0 +1,59 @@
+@import "../../styles/variables";
+@import "../../styles/mixings";
+.road-map-widget {
+  @include card;
+  padding: 24px;
+
+  .card-title {
+    font-weight: 700;
+    font-size: 18px;
+    color: $rhino;
+  }
+  .link {
+    color: $royal-blue;
+    font-size: 13px;
+    text-decoration: underline;
+    font-weight: 600;
+  }
+  ul {
+    list-style: none;
+    padding: 0px;
+    margin-bottom: 0;
+    li {
+      display: flex;
+      justify-content: space-between;
+      div {
+        display: flex;
+        align-items: center;
+      }
+      color: $lynch;
+      .status {
+        font-size: $font-size-body-1;
+        display: block;
+      }
+      .orange,
+      .violet,
+      .blue {
+        display: inline-block;
+        width: 8px;
+        height: 8px;
+        border-radius: 100%;
+        margin: 8px 16px 8px 0px;
+      }
+      .orange {
+        background: $tacao;
+      }
+      .violet {
+        background: $electric-violet;
+      }
+      .blue {
+        background: $malibu;
+      }
+      .total {
+        align-self: center;
+        font-weight: 700;
+        display: block;
+      }
+    }
+  }
+}
