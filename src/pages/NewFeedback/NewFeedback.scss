@@ -24,14 +24,15 @@
   }
   .new {
     @include card;
+    position: relative;
     display: flex;
     flex-direction: column;
-    gap: 14px;
+    gap: 16px;
     padding: 52px 42px 40px 42px;
     .container-image {
       position: absolute;
-      top: 209px;
-      left: 386px;
+      top: -28px;
+      left: 39px;
       width: 56px;
       height: 56px;
     }
@@ -92,4 +93,7 @@
 
 @media (max-width: 375px) {
   @import "./NewFeedback.mobile.scss";
+}
+@media (min-width: 376px) and (max-width: 768px) {
+  @import "./NewFeedback.tablet.scss";
 }
