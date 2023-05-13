@@ -1,6 +1,7 @@
 @import "../../styles/variables";
 @import "../../styles/mixings";
 .home {
+  width: 100%;
   .feedbacks {
     display: flex;
     flex-direction: column;
