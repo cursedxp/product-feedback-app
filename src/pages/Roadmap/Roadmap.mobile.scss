@@ -1,6 +1,10 @@
 .road-map {
+  padding: 0px;
   .nav {
+    height: 100px;
+    border-radius: 0;
     padding: 24px;
+
     .link {
       font-size: 13px;
       :last-child {
