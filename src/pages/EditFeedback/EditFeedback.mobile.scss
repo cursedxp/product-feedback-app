@@ -6,7 +6,6 @@
     margin-bottom: 0px;
   }
   .edit {
-    position: relative;
     padding: 24px;
     .container-image {
       top: -20px;
@@ -15,7 +14,8 @@
       height: 40px;
     }
     .feedback-title {
-      margin-top: 20px;
+      font-size: 18px;
+      margin: 20px 0px 0px 0px;
     }
     form {
       .title-section .title,
