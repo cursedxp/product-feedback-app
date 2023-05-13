@@ -17,6 +17,14 @@
     }
     .link {
       color: $white;
+      span {
+        font-size: 14px;
+      }
+      div {
+        margin-top: 4px;
+        font-size: 24px;
+        font-weight: 700;
+      }
     }
     button {
       @include violette-button-default;
