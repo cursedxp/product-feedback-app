@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
-import "./RoadMap.scss";
+import "./RoadMapWidget.scss";
 export default function RoadMapWidget() {
   return (
-    <div className="road-map">
+    <div className="road-map-widget">
       <div className="flex space-between align-center">
         <span className="card-title">Roadmap</span>
         <Link className="link">View</Link>
