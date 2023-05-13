@@ -1,5 +1,7 @@
 @import "../../styles/mixings";
 .filters-section {
+  margin: 0px;
+  height: auto;
   .company {
     /* Set the background image and position it in the center of the header */
     background: url("../../../public/img/mobile/background-header.png")
@@ -20,7 +22,7 @@
       align-items: center;
     }
   }
-  .road-map,
+  .road-map-widget,
   .category-filter {
     display: none;
   }
@@ -28,7 +30,7 @@
 .mobile-menu {
   position: absolute;
   background-color: rgba(0, 0, 0, 0.5);
-  top: 72px;
+  top: 64px;
   right: 0px;
   width: 100vw;
   height: 100vh;
