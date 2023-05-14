@@ -5,7 +5,9 @@ export default function RoadMapWidget() {
     <div className="road-map-widget">
       <div className="flex space-between align-center">
         <span className="card-title">Roadmap</span>
-        <Link className="link">View</Link>
+        <Link to={"/roadmap"} className="link">
+          View
+        </Link>
       </div>
       <ul>
         <li>
