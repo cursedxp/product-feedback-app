@@ -14,6 +14,7 @@
     }
   }
   .roadmap-filter {
+    display: flex;
     font-size: 13px;
     font-weight: 700;
     padding: 20px;
@@ -22,6 +23,7 @@
     border-bottom: 1px solid rgba(100, 113, 150, 0.2);
   }
   .feedback-list {
+    display: block;
     color: $primary-color;
     padding: 24px;
     margin-bottom: 98px;

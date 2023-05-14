@@ -31,12 +31,15 @@
     }
   }
   .roadmap-filter {
-    display: flex;
+    display: none;
     justify-content: space-between;
     gap: 24px;
     ::first-letter {
       text-transform: uppercase;
     }
+  }
+  .feedback-list {
+    display: none;
   }
   .status-menu {
     position: relative;
