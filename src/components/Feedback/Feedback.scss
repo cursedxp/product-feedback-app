@@ -2,6 +2,7 @@
 @import "../../styles/mixings";
 
 .feedback {
+  position: relative;
   @include card;
   display: flex;
   align-items: center;
