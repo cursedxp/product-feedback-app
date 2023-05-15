@@ -30,6 +30,32 @@
       @include violette-button-default;
     }
   }
+
+  .feedback-statuses {
+    margin-top: 48px;
+    display: flex;
+    gap: 30px;
+    color: $primary-color;
+    & > div {
+      flex: 1;
+    }
+    .status-name {
+      font-size: 18px;
+      font-weight: 700;
+      &::first-letter {
+        text-transform: uppercase;
+      }
+    }
+    .status-subtitle {
+      margin-bottom: 32px;
+    }
+    .feedbacks-by-status {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+  }
+
   .roadmap-filter {
     display: none;
     justify-content: space-between;
