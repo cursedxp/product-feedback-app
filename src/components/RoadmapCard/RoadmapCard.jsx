@@ -15,8 +15,10 @@ export default function RoadmapCard({ item }) {
     cardColorClass.backgroundColor = "#62BCFA";
   }
 
+  console.log(status);
+
   return (
-    <div className="feedback">
+    <div className="roadmap-card">
       <div className="card-color" style={cardColorClass}></div>
       <div className="card-status">
         <span className="circle" style={cardColorClass}></span>
@@ -27,13 +29,15 @@ export default function RoadmapCard({ item }) {
         <div className="description">{description}</div>
         <div className="category">{category}</div>
       </div>
-      <div className="upvotes">
-        <img src={ArrowIconUp} alt="" />
-        {upvotes}
-      </div>
-      <div className="comments">
-        <img src={CommetIcon} alt="" />
-        {comments && comments.length ? comments.length : 0}
+      <div className="upvotes-comments">
+        <div className="upvotes">
+          <img src={ArrowIconUp} alt="" />
+          {upvotes}
+        </div>
+        <div className="total-comments">
+          <img src={CommetIcon} alt="" />
+          {comments && comments.length ? comments.length : 0}
+        </div>
       </div>
     </div>
   );
