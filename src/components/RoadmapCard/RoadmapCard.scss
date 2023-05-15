@@ -1,6 +1,12 @@
-.feedback {
+@import "../../styles/variables";
+@import "../../styles/mixings";
+.roadmap-card {
   position: relative;
-
+  @include card;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 28px 32px;
   .card-color {
     position: absolute;
     top: 0;
@@ -18,9 +24,58 @@
       border-radius: 100%;
       margin-right: 8px;
     }
-    .status {
-      &::first-letter {
-        text-transform: uppercase;
+    .status::first-letter {
+      text-transform: uppercase;
+    }
+  }
+  .item-details {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    flex-grow: 1;
+    order: 2;
+    .title {
+      font-size: 18px;
+      font-weight: 700;
+      color: $primary-color;
+    }
+    .description {
+      color: $lynch;
+      line-height: 20px;
+    }
+    .category {
+      @include category-card;
+      flex-grow: 0;
+    }
+  }
+  .upvotes-comments {
+    display: flex;
+    justify-content: space-between;
+    order: 2;
+    .upvotes {
+      @include upvotes;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      font-size: 13px;
+      align-items: center;
+      order: 1;
+      align-self: flex-start;
+      margin-right: 40px;
+      padding: 8px;
+      img {
+        margin-bottom: 8px;
+      }
+    }
+    .total-comments {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-weight: 700;
+      order: 3;
+      img {
+        margin-right: 8px;
       }
     }
   }
