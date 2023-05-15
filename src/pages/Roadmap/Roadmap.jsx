@@ -13,14 +13,25 @@ export default function Roadmap() {
   const [contentTitle, setContentTitle] = useState("in-progress");
   const [infoText, setInfoText] = useState("Currently being developed");
   const [numFeedbacks, setNumFeedbacks] = useState(3);
-  const memoizedFeedbacksByStatus = useMemo(
-    () => feedbacksByStatus,
-    [feedbacksByStatus]
-  );
 
+  const subTitles = {
+    planned: "Ideas prioritized for research",
+    "in-progress": "Currently being developed",
+    live: "Released features",
+  };
   const statuses = useSelector((state) => {
     return state.data.data.productRequests?.map((feedback) => feedback.status);
   });
+
+  const feedbacks = useSelector((state) => {
+    const productRequests = state.data.data.productRequests;
+    if (productRequests) {
+      return productRequests;
+    }
+    return [];
+  });
+
+  const memoizedFeedbacks = useMemo(() => feedbacks, [feedbacks]);
 
   const memoizedAllStatuses = useMemo(() => statuses, [statuses]);
 
@@ -54,8 +65,12 @@ export default function Roadmap() {
     dispatch(setStatus(status));
   };
 
-  console.log("feedbacksByStatus", feedbacksByStatus);
-  console.log("memoizedFeedbacksByStatus", memoizedFeedbacksByStatus);
+  const filterByStatus = (status) => {
+    const fileteredFeedbacks = memoizedFeedbacks.filter((item) => {
+      return item.status === status;
+    });
+    return fileteredFeedbacks;
+  };
 
   return (
     <div className="road-map">
@@ -67,6 +82,29 @@ export default function Roadmap() {
         </Link>
         <button>+ Add Feedback</button>
       </div>
+
+      <div className="feedback-statuses">
+        {Object.entries(allStatus).map(([key, value]) => {
+          filterByStatus(key);
+          if (key !== "suggestion") {
+            return (
+              <>
+                <div>
+                  <div className="status-name">{`${key} (${value})`}</div>
+                  <div className="status-subtitle">{subTitles[key]}</div>
+                  <div className="feedbacks-by-status">
+                    {filterByStatus(key).map((item) => {
+                      return <RoadmapCard item={item} key={item.id} />;
+                    })}
+                  </div>
+                </div>
+              </>
+            );
+          }
+          return null;
+        })}
+      </div>
+
       <div className="roadmap-filter">
         {Object.entries(allStatus).map(([key, value]) => {
           if (key !== "suggestion") {
