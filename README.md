@@ -11,12 +11,8 @@ This is a solution to the [Product feedback app challenge on Frontend Mentor](ht
 - [My process](#my-process)
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
-  - [Continued development](#continued-development)
   - [Useful resources](#useful-resources)
 - [Author](#author)
-- [Acknowledgments](#acknowledgments)
-
-**Note: Delete this note and update the table of contents based on what sections you keep.**
 
 ## Overview
 
@@ -36,20 +32,12 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
-
-Add a screenshot of your solution. The easiest way to do this is to use Firefox to view your project, right-click the page and select "Take a Screenshot". You can choose either a full-height screenshot or a cropped one based on how long the page is. If it's very long, it might be best to crop it.
-
-Alternatively, you can use a tool like [FireShot](https://getfireshot.com/) to take the screenshot. FireShot has a free option, so you don't need to purchase it.
-
-Then crop/optimize/edit your image however you like, add it to your project, and update the file path in the image above.
-
-**Note: Delete this note and the paragraphs above when you add your screenshot. If you prefer not to add a screenshot, feel free to remove this entire section.**
+<img src='https://github.com/cursedxp/product-feedback-app/blob/main/preview.jpg' style="width: 717px; height: 461px;">
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [https://github.com/cursedxp/product-feedback-app](https://github.com/cursedxp/product-feedback-app)
+- Live Site URL: [https://github.com/cursedxp/product-feedback-app](https://github.com/cursedxp/product-feedback-app)
 
 ## My process
 
@@ -57,64 +45,32 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 
 - Semantic HTML5 markup
 - CSS custom properties
+- SCSS
 - Flexbox
-- CSS Grid
+- Redux ToolKit
 - Mobile-first workflow
 - [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
-
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
+Throughout this project, my first foray into Redux Toolkit, I had the opportunity to delve into various key concepts and gained invaluable insights. Let's summarize what I learned from this endeavor.
 
-To see how you can add code snippets, see below:
+I started by grasping the fundamentals of Redux Toolkit, including the usage of asyncThunk. This powerful middleware allowed me to handle asynchronous actions seamlessly, such as API requests and responses. Leveraging asyncThunk, I could initiate asynchronous operations and effectively manage the resulting data, enhancing the responsiveness of my applications.
 
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
+In addition, I explored the concept of extra reducers, which provided me with the flexibility to modify state and handle specific actions separately. This modular approach kept my codebase organized and maintainable, allowing for easy extensibility and separation of concerns.
 
-```css
-.proud-of-this-css {
-  color: papayawhip;
-}
-```
+Another essential skill I acquired was the creation of useSelector functions. These functions allowed me to selectively extract specific slices of state from the Redux store. By utilizing the useSelector hook, I could efficiently access the required data for component rendering, leading to improved performance and a streamlined state management process.
 
-```js
-const proudOfThisFunc = () => {
-  console.log("🎉");
-};
-```
+Moreover, I delved into the power of useMemo to optimize app performance. By memoizing the results of expensive computations or complex transformations, I could avoid unnecessary re-calculations and significantly improve efficiency. This technique proved particularly useful when working with computationally intensive operations or large datasets, ensuring a smoother user experience by reducing unnecessary computational load.
 
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
-
-**Note: Delete this note and the content within this section and replace with your own learnings.**
-
-### Continued development
-
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
-
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
+To summarize, this project provided me with a comprehensive understanding of Redux Toolkit and its various features. From utilizing asyncThunk for asynchronous actions to leveraging extra reducers and the creation of useSelector functions, I gained the necessary skills to develop robust and scalable applications. Additionally, by harnessing the power of useMemo, I learned how to optimize app performance and enhance the overall user experience. Armed with these newfound skills, I am well-prepared to create high-quality applications using Redux Toolkit.
 
 ### Useful resources
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
-
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
+- [ReduxToolkit Tutorial](https://www.youtube.com/watch?v=0awA5Uw6SJE&list=PLC3y8-rFHvwiaOAuTtVXittwybYIorRB3) - This helped me learn more about Redux and its concept.
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
-
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
-
-## Acknowledgments
-
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
-
-**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**
+- Website - [Anil Ozsoy](https://github.com/cursedxp)
+- Frontend Mentor - [@cursedxp](https://www.frontendmentor.io/profile/cursedxp)
+- Twitter - [@anil_ozsoy](https://www.twitter.com/anil_ozsoy)
