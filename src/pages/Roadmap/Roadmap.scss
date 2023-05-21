@@ -115,3 +115,6 @@
 @media (max-width: 375px) {
   @import "Roadmap.mobile.scss";
 }
+@media (min-width: 376px) and (max-width: 768px) {
+  @import "Roadmap.tablet.scss";
+}
