@@ -37,7 +37,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [https://github.com/cursedxp/product-feedback-app](https://github.com/cursedxp/product-feedback-app)
-- Live Site URL: [https://github.com/cursedxp/product-feedback-app](https://github.com/cursedxp/product-feedback-app)
+- Live Site URL: [https://cursedxp.github.io/product-feedback-app/](https://cursedxp.github.io/product-feedback-app/)
 
 ## My process
 
