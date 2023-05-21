@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { getData, setStatus, filteredByStatus } from "../../data/dataSlice";
-import { useEffect, useMemo, useState } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import leftArrow from "../../assets/icons/icon-arrow-left.svg";
-
+import { v4 as uuidv4 } from "uuid";
 import "./Roadmap.scss";
 import RoadmapCard from "../../components/RoadmapCard/RoadmapCard";
 
@@ -86,9 +86,10 @@ export default function Roadmap() {
       <div className="feedback-statuses">
         {Object.entries(allStatus).map(([key, value]) => {
           filterByStatus(key);
+          let id = uuidv4();
           if (key !== "suggestion") {
             return (
-              <>
+              <React.Fragment key={id}>
                 <div>
                   <div className="status-name">{`${key} (${value})`}</div>
                   <div className="status-subtitle">{subTitles[key]}</div>
@@ -98,7 +99,7 @@ export default function Roadmap() {
                     })}
                   </div>
                 </div>
-              </>
+              </React.Fragment>
             );
           }
           return null;
