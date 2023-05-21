@@ -32,7 +32,7 @@ Users should be able to:
 
 ### Screenshot
 
-<img src='https://github.com/cursedxp/product-feedback-app/blob/main/preview.jpg' style="width: 717px; height: 461px;">
+<img src='https://github.com/cursedxp/product-feedback-app/blob/main/preview.jpg' style="width: 1440px; height: 1056px;">
 
 ### Links
 
