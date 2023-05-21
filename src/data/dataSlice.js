@@ -2,7 +2,9 @@ import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
 
 export const getData = createAsyncThunk("data/getData", () => {
-  return axios.get(`/data.json`).then((response) => response.data);
+  return axios
+    .get(`${process.env.PUBLIC_URL}/data.json`)
+    .then((response) => response.data);
 });
 
 const dataSlice = createSlice({
