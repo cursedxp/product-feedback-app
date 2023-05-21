@@ -15,8 +15,6 @@ export default function RoadmapCard({ item }) {
     cardColorClass.backgroundColor = "#62BCFA";
   }
 
-  console.log(status);
-
   return (
     <div className="roadmap-card">
       <div className="card-color" style={cardColorClass}></div>
